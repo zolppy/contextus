@@ -1,4 +1,5 @@
-from .pdf_processor import PDFDocumentProcessor
 from .rag import Rag
+from .dir import Dir
+from .pdf import PDFDocumentProcessor
 
-__all__ = ["PDFDocumentProcessor", "Rag"]
+__all__ = ["Rag", "Dir", "PDFDocumentProcessor"]

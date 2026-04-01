@@ -1,4 +1,4 @@
-from .utils import PDFDocumentProcessor, Rag
 from .cores import Settings
+from .utils import PDFDocumentProcessor, Rag, Dir
 
-__all__ = ["PDFDocumentProcessor", "Rag", "Settings"]
+__all__ = ["Settings", "PDFDocumentProcessor", "Rag", "Dir"]
