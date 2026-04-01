@@ -25,7 +25,7 @@ class Rag:
         chroma_db_file = self.persist_directory / "chroma.sqlite3"
 
         if not chroma_db_file.exists():
-            # Cria um novo banco a partir dos documentos
+            # Cria um novo banco vetorial a partir dos documentos
             self.vector_store = Chroma.from_documents(  # type: ignore
                 documents=self.documents,
                 embedding=self.embedding,
@@ -33,9 +33,13 @@ class Rag:
                 **chroma_kwargs,
             )
         else:
-            # Carrega banco existente
+            # Carrega banco vetorial existente
             self.vector_store = Chroma(
                 persist_directory=str(self.persist_directory),
                 embedding_function=self.embedding,
                 **chroma_kwargs,
             )
+
+    # Retorna um retriever a partir do banco vetorial
+    def as_retriever(self: Self) -> Any:
+        return self.vector_store.as_retriever()
