@@ -1,12 +1,13 @@
 import os
+from pathlib import Path
 from app import PDFDocumentProcessor, Rag, Settings
 
 settings = Settings()
 
 os.environ["HF_TOKEN"] = settings.hf_token.get_secret_value()
 
-DOCUMENTS_PATH = "app/documents"
-VECTOR_STORE_PATH = "app/vector_store"
+DOCUMENTS_PATH = Path("app/documents")
+VECTOR_STORE_PATH = Path("app/vector_store")
 
 
 if __name__ == "__main__":
