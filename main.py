@@ -1,5 +1,10 @@
+import os
 from pathlib import Path
-from app import PDFDocumentProcessor, Rag
+from app import PDFDocumentProcessor, Rag, Settings
+
+settings = Settings()
+
+os.environ["HF_TOKEN"] = settings.hf_token.get_secret_value()
 
 
 if __name__ == "__main__":
