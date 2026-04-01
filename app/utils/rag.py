@@ -4,6 +4,7 @@ from typing import Self, List, Any
 from langchain_chroma import Chroma
 from langchain_core.documents import Document
 from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_core.vectorstores import VectorStoreRetriever
 
 
 class Rag:
@@ -41,5 +42,5 @@ class Rag:
             )
 
     # Retorna um retriever a partir do banco vetorial
-    def as_retriever(self: Self) -> Any:
+    def as_retriever(self: Self) -> VectorStoreRetriever:
         return self.vector_store.as_retriever()
