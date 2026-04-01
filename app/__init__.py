@@ -1,3 +1,3 @@
-from .utils import PDFDocumentProcessor
+from .utils import PDFDocumentProcessor, Rag
 
-__all__ = ["PDFDocumentProcessor"]
+__all__ = ["PDFDocumentProcessor", "Rag"]
