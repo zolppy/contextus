@@ -7,3 +7,5 @@ class Settings(BaseSettings):
 
     hf_token: SecretStr = SecretStr("")
     sentence_transformer: str = "sentence-transformers/all-mpnet-base-v2"
+    groq_api_key: SecretStr = SecretStr("")
+    foundation_model: str = "openai/gpt-oss-120b"
