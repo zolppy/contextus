@@ -1,3 +1,4 @@
+from .dir import Dir
 from pathlib import Path
 from typing import Self, List, Any
 from langchain_chroma import Chroma
@@ -15,9 +16,14 @@ class Rag:
         self.embedding = HuggingFaceEmbeddings()
         self.documents = documents
         self.persist_directory = persist_directory
-        self.vector_store = Chroma.from_documents(  # type: ignore
-            documents=documents,
-            embedding=self.embedding,
-            persist_directory=str(persist_directory),
-            **chroma_kwars,
-        )
+
+        dir_persist_directory = Dir(persist_directory)
+
+        # Evita recriação do mesmo banco vetorial toda vez que um novo objeto for instanciado
+        if dir_persist_directory.is_dir() and dir_persist_directory.is_empty():
+            self.vector_store = Chroma.from_documents(  # type: ignore
+                documents=documents,
+                embedding=self.embedding,
+                persist_directory=str(persist_directory),
+                **chroma_kwars,
+            )

@@ -15,4 +15,4 @@ if __name__ == "__main__":
     documents = processor.load_documents()
     split_documents = processor.split_documents(documents)
     rag = Rag(documents=split_documents, persist_directory=VECTOR_STORE_PATH)
-    print(rag.vector_store)
+    print(rag)
