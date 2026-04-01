@@ -1,4 +1,3 @@
-from . import dir
 from .. import cores
 from pathlib import Path
 from typing import Self, List, Any
@@ -23,18 +22,18 @@ class Rag:
         # Garante que persist_directory exista
         self.persist_directory.mkdir(parents=True, exist_ok=True)
 
-        dir_persist_directory = dir.Dir(self.persist_directory)
+        chroma_db_file = self.persist_directory / "chroma.sqlite3"
 
-        # Se o diretório está vazio, cria o banco vetorial a partir dos documentos
-        if dir_persist_directory.is_empty():
+        if not chroma_db_file.exists():
+            # Cria um novo banco a partir dos documentos
             self.vector_store = Chroma.from_documents(  # type: ignore
-                documents=documents,
+                documents=self.documents,
                 embedding=self.embedding,
                 persist_directory=str(self.persist_directory),
                 **chroma_kwargs,
             )
         else:
-            # Carrega banco vetorial existente
+            # Carrega banco existente
             self.vector_store = Chroma(
                 persist_directory=str(self.persist_directory),
                 embedding_function=self.embedding,
