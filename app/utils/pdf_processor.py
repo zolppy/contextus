@@ -1,4 +1,3 @@
-from pathlib import Path
 from typing import Self, List, Any
 from pydantic import PositiveInt
 from langchain_core.documents import Document
@@ -9,7 +8,7 @@ from langchain_community.document_loaders import PyPDFDirectoryLoader
 class PDFDocumentProcessor:
     def __init__(
         self: Self,
-        documents_path: Path,
+        documents_path: str,
         chunk_size: PositiveInt = 1000,
         chunk_overlap: PositiveInt = 200,
         **splitter_kwargs: Any,
