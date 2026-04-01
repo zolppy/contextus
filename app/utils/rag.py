@@ -1,7 +1,7 @@
 from .. import cores
 from pathlib import Path
-from typing import Self, List, Any
 from langchain_chroma import Chroma
+from typing import List, Any, Optional
 from langchain_core.documents import Document
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.vectorstores import VectorStoreRetriever
@@ -9,9 +9,9 @@ from langchain_core.vectorstores import VectorStoreRetriever
 
 class Rag:
     def __init__(
-        self: Self,
-        documents: List[Document],
+        self,
         persist_directory: Path | str,
+        documents: Optional[List[Document]] = None,
         **chroma_kwargs: Any,
     ) -> None:
         self.embedding = HuggingFaceEmbeddings(
@@ -28,7 +28,7 @@ class Rag:
         if not chroma_db_file.exists():
             # Cria um novo banco vetorial a partir dos documentos
             self.vector_store = Chroma.from_documents(  # type: ignore
-                documents=self.documents,
+                documents=self.documents or [],
                 embedding=self.embedding,
                 persist_directory=str(self.persist_directory),
                 **chroma_kwargs,
@@ -42,5 +42,5 @@ class Rag:
             )
 
     # Retorna um retriever a partir do banco vetorial
-    def as_retriever(self: Self) -> VectorStoreRetriever:
+    def as_retriever(self) -> VectorStoreRetriever:
         return self.vector_store.as_retriever()
