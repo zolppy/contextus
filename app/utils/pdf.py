@@ -1,6 +1,6 @@
 from pathlib import Path
+from typing import List, Any
 from pydantic import PositiveInt
-from typing import Self, List, Any
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import PyPDFDirectoryLoader
@@ -8,7 +8,7 @@ from langchain_community.document_loaders import PyPDFDirectoryLoader
 
 class PDFDocumentProcessor:
     def __init__(
-        self: Self,
+        self,
         documents_path: Path | str,
         chunk_size: PositiveInt = 1000,
         chunk_overlap: PositiveInt = 200,
@@ -20,8 +20,8 @@ class PDFDocumentProcessor:
             chunk_size=chunk_size, chunk_overlap=chunk_overlap, **splitter_kwargs
         )
 
-    def load_documents(self: Self) -> List[Document]:
+    def load_documents(self) -> List[Document]:
         return self.document_loader.load()
 
-    def split_documents(self: Self, documents: List[Document]) -> List[Document]:
+    def split_documents(self, documents: List[Document]) -> List[Document]:
         return self.splitter.split_documents(documents=documents)
