@@ -1,4 +1,5 @@
 from . import dir
+from .. import cores
 from pathlib import Path
 from typing import Self, List, Any
 from langchain_chroma import Chroma
@@ -13,7 +14,9 @@ class Rag:
         persist_directory: Path | str,
         **chroma_kwargs: Any,
     ) -> None:
-        self.embedding = HuggingFaceEmbeddings()
+        self.embedding = HuggingFaceEmbeddings(
+            model_name=cores.Settings().sentence_transformer
+        )
         self.documents = documents
         self.persist_directory = Path(persist_directory)
 

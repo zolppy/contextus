@@ -6,3 +6,4 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 
     hf_token: SecretStr = SecretStr("")
+    sentence_transformer: str = "sentence-transformers/all-mpnet-base-v2"
