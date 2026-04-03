@@ -14,13 +14,11 @@ class Rag:
         **chroma_kwargs: Any,
     ) -> None:
         self.embedding = HuggingFaceEmbeddings(
-            model_name=cores.Settings().sentence_transformer, show_progress=True
+            model_name=cores.Settings().sentence_transformer,
+            show_progress=True,
+            encode_kwargs={"normalize_embeddings": True},
         )
         self.persist_directory = Path(persist_directory)
-        self.persist_directory.mkdir(parents=True, exist_ok=True)
-        chroma_db_file = self.persist_directory / "chroma.sqlite3"
-
-        # Garante que persist_directory exista
         self.persist_directory.mkdir(parents=True, exist_ok=True)
 
         chroma_db_file = self.persist_directory / "chroma.sqlite3"
@@ -41,6 +39,9 @@ class Rag:
                 **chroma_kwargs,
             )
 
-    # Retorna um retriever a partir do banco vetorial
     def as_retriever(self) -> VectorStoreRetriever:
-        return self.vector_store.as_retriever(search_kwargs={"k": 50})
+        # Utilização de CSV é problemamático (LLMs lidam melhor com linguagem natural), é necessário um k alto
+        return self.vector_store.as_retriever(
+            search_type="similarity",
+            search_kwargs={"k": 12},
+        )

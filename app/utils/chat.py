@@ -1,18 +1,18 @@
+from .. import cores
 from typing import Optional
 from pydantic import PositiveInt
 from langchain_groq import ChatGroq
+from langchain_core.vectorstores import VectorStoreRetriever
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain_core.chat_history import (
-    InMemoryChatMessageHistory,
-    BaseChatMessageHistory,
-)
+from langchain_classic.chains.combine_documents import create_stuff_documents_chain  # type: ignore
 from langchain_classic.chains import (
     create_retrieval_chain,
     create_history_aware_retriever,
 )
-from langchain_classic.chains.combine_documents import create_stuff_documents_chain  # type: ignore
-from langchain_core.vectorstores import VectorStoreRetriever
-from .. import cores
+from langchain_core.chat_history import (
+    InMemoryChatMessageHistory,
+    BaseChatMessageHistory,
+)
 
 
 class ConversationalRAG:
@@ -20,9 +20,10 @@ class ConversationalRAG:
         self,
         groq_model: Optional[str],
         system_prompt: Optional[str],
-        temperature: float,
         memory_length: PositiveInt,
         retriever: VectorStoreRetriever,
+        temperature: float = 0.2,
+        top_p: float = 0.85,
     ) -> None:
         self.retriever = retriever
         self.memory_length = memory_length
@@ -31,6 +32,7 @@ class ConversationalRAG:
         self.llm = ChatGroq(
             model=groq_model or cores.Settings().foundation_model,
             temperature=temperature,
+            model_kwargs={"top_p": top_p},
         )
 
         # System prompt padrão (caso não seja fornecido)
@@ -101,7 +103,7 @@ class ConversationalRAG:
             combine_docs_chain=self.document_chain,
         )
 
-        # SOLUÇÃO DO WARNING: Dicionário tipado
+        # Dicionário de sessões (históricos)
         self.session_histories: dict[str, BaseChatMessageHistory] = {}
 
     def _get_session_history(self, session_id: str) -> BaseChatMessageHistory:
@@ -112,20 +114,29 @@ class ConversationalRAG:
     def chat(self, question: str, session_id: str = "default") -> str:
         history = self._get_session_history(session_id)
 
-        # Executa a cadeia com o histórico atual
-        response = self.retrieval_chain.invoke(
-            {
-                "input": question,
-                "chat_history": history.messages,
-            }
-        )
+        try:
+            response = self.retrieval_chain.invoke(
+                {
+                    "input": question,
+                    "chat_history": history.messages,
+                }
+            )
+        except Exception as e:
+            # Log do erro (pode ser substituído por logging)
+            print(f"Erro durante a invocação da cadeia RAG: {e}")
+            return "Desculpe, ocorreu um erro interno ao processar sua pergunta. Tente novamente mais tarde."
 
-        # Atualiza o histórico com a nova interação
+        # Atualiza o histórico
         history.add_user_message(question)
         history.add_ai_message(response["answer"])
 
-        # Limita o tamanho do histórico (evita estouro de tokens)
-        if len(history.messages) > self.memory_length * 2:
-            history.messages = history.messages[-self.memory_length * 2 :]
+        # Limita o histórico (mantém apenas as últimas 'memory_length' interações completas)
+        max_messages = self.memory_length * 2
+        if len(history.messages) > max_messages:
+            # Substitui a lista internamente (método seguro)
+            trimmed = history.messages[-max_messages:]
+            history.clear()
+            for msg in trimmed:
+                history.add_message(msg)
 
         return response["answer"]
