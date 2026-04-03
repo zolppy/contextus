@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from app import PDFDocumentProcessor, Rag, Settings, ConversationalRAG
+from app import Rag, Settings, ConversationalRAG, DocumentProcessor
 
 
 os.environ["HF_TOKEN"] = Settings().hf_token.get_secret_value()
@@ -12,18 +12,8 @@ VECTOR_STORE_PATH = Path("app/vector_store")
 
 if __name__ == "__main__":
     chroma_db_file = VECTOR_STORE_PATH / "chroma.sqlite3"
-
-    # Só processa os PDFs se o banco não existir
-    if not chroma_db_file.exists():
-        print("Criando banco vetorial a partir dos documentos...")
-        processor = PDFDocumentProcessor(documents_path=DOCUMENTS_PATH)
-        documents = processor.load_documents()
-        split_documents = processor.split_documents(documents)
-    else:
-        print("Banco vetorial encontrado. Pulando processamento de PDFs...")
-        split_documents = None  # O Rag vai carregar do disco
-
-    rag = Rag(documents=split_documents, persist_directory=VECTOR_STORE_PATH)
+    processor = DocumentProcessor(documents_path=DOCUMENTS_PATH)
+    rag = Rag(documents_loader=processor, persist_directory=VECTOR_STORE_PATH)
     retriever = rag.as_retriever()
 
     chatbot = ConversationalRAG(

@@ -1,5 +1,5 @@
 from .rag import Rag
-from .pdf import PDFDocumentProcessor
 from .chat import ConversationalRAG
+from .document_loader import DocumentProcessor
 
-__all__ = ["Rag", "PDFDocumentProcessor", "ConversationalRAG"]
+__all__ = ["Rag", "ConversationalRAG", "DocumentProcessor"]

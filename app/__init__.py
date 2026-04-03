@@ -1,4 +1,4 @@
 from .cores import Settings
-from .utils import PDFDocumentProcessor, Rag, ConversationalRAG
+from .utils import Rag, ConversationalRAG, DocumentProcessor
 
-__all__ = ["Settings", "PDFDocumentProcessor", "Rag", "ConversationalRAG"]
+__all__ = ["Settings", "Rag", "ConversationalRAG", "DocumentProcessor"]
