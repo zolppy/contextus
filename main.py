@@ -382,6 +382,10 @@ def main() -> None:
                     delete_session(sess_id)
                     st.rerun()
 
+        # A informação de versão serve mais para depuração, não será incluindo na versão final
+        st.divider()
+        st.caption("Versão: 1.0.0")
+
     agent = init_agent()
 
     current_messages = st.session_state["all_messages"][st.session_state["session_id"]]
