@@ -227,10 +227,6 @@ def load_messages_for_ui(session_id: str) -> List[Dict[str, str]]:
 
 
 def render_message_with_charts(content: str):
-    """
-    Função auxiliar para identificar blocos JSON de gráficos na resposta
-    do LLM e renderizá-los nativamente via Streamlit.
-    """
     # Regex para capturar blocos markdown de JSON
     json_pattern = re.compile(r"```json\n(.*?)\n```", re.DOTALL)
     parts = json_pattern.split(content)
@@ -390,6 +386,7 @@ def main() -> None:
 
     current_messages = st.session_state["all_messages"][st.session_state["session_id"]]
 
+    # Renderiza as mensagens já existentes na sessão
     for msg in current_messages:
         with st.chat_message(msg["role"]):
             if msg["role"] == "assistant":
@@ -400,83 +397,43 @@ def main() -> None:
     user_input = st.chat_input("Envie uma mensagem", max_chars=1000)
 
     if user_input:
+        # Adiciona a mensagem do usuário ao estado e exibe
         current_messages.append({"role": "user", "content": user_input})
         with st.chat_message("user"):
             st.markdown(user_input)
 
+        # Processa a resposta do assistente
         with st.chat_message("assistant"):
-            # Substituímos o st.spinner pelo callback de streaming nativo
-            st_callback = StreamlitCallbackHandler(st.container())
-
-            try:
-                # Injetamos o callback na configuração
-                config: RunnableConfig = {
-                    "configurable": {"session_id": st.session_state["session_id"]},
-                    "callbacks": [st_callback],
-                }
-
-                # A execução agora transmitirá o texto e os passos em tempo real na tela
-                resposta_dict = agent.invoke({"input": user_input}, config=config)
-                resposta = str(resposta_dict["output"])
-
-                # Salva a string crua (com o JSON) no banco de dados e no estado
-                current_messages.append({"role": "assistant", "content": resposta})
-                st.session_state["all_messages"][st.session_state["session_id"]] = (
-                    load_messages_for_ui(st.session_state["session_id"])
-                )
-
-                # Recarrega a página. Isso limpa a visualização do streaming (que exibe o JSON cru)
-                # e aciona o loop principal, onde 'render_message_with_charts' vai renderizar o gráfico perfeitamente.
-                st.rerun()
-
-            except groq.APITimeoutError as e:
-                st.error("Tempo esgotado. Tente novamente.")
-            except groq.APIConnectionError as e:
-                st.error("Não foi possível se conectar à API. Verifique sua internet.")
-            except groq.InternalServerError as e:
-                st.error("Erro interno no servidor da Groq. Aguarde e tente novamente.")
-            except groq.RateLimitError as e:
-                st.error(
-                    "Limite de requisições por minuto atingido. Aguarde um pouco e tente novamente."
-                )
-            except groq.APIStatusError as e:
-                if e.status_code == 413:
-                    st.error(
-                        "Sua pergunta gerou um contexto muito grande para o modelo atual. Por favor, tente novamente."
-                    )
-            except Exception as e:
-                st.error(
-                    "Ocorreu um erro inesperado. Por favor, tente novamente mais tarde."
-                )
-        current_messages.append({"role": "user", "content": user_input})
-        with st.chat_message("user"):
-            st.markdown(user_input)
-
-        with st.chat_message("assistant"):
-            with st.spinner("Analisando..."):
+            with st.spinner("Analisando dados na base de conhecimento..."):
                 try:
                     config: RunnableConfig = {
                         "configurable": {"session_id": st.session_state["session_id"]}
                     }
+
                     resposta_dict = agent.invoke({"input": user_input}, config=config)
                     resposta = str(resposta_dict["output"])
 
-                    # Usa a nova função de renderização que cuida dos gráficos
                     render_message_with_charts(resposta)
 
-                    # A string crua com o JSON continua sendo salva no banco de dados
+                    # Adiciona a resposta ao estado
                     current_messages.append({"role": "assistant", "content": resposta})
-                except groq.APITimeoutError as e:
+
+                    # Sincroniza o estado com o banco de dados
+                    st.session_state["all_messages"][st.session_state["session_id"]] = (
+                        load_messages_for_ui(st.session_state["session_id"])
+                    )
+
+                except groq.APITimeoutError:
                     st.error("Tempo esgotado. Tente novamente.")
-                except groq.APIConnectionError as e:
+                except groq.APIConnectionError:
                     st.error(
                         "Não foi possível se conectar à API. Verifique sua internet."
                     )
-                except groq.InternalServerError as e:
+                except groq.InternalServerError:
                     st.error(
                         "Erro interno no servidor da Groq. Aguarde e tente novamente."
                     )
-                except groq.RateLimitError as e:
+                except groq.RateLimitError:
                     st.error(
                         "Limite de requisições por minuto atingido. Aguarde um pouco e tente novamente."
                     )
@@ -485,14 +442,10 @@ def main() -> None:
                         st.error(
                             "Sua pergunta gerou um contexto muito grande para o modelo atual. Por favor, tente novamente."
                         )
-                except Exception as e:
+                except Exception:
                     st.error(
                         "Ocorreu um erro inesperado. Por favor, tente novamente mais tarde."
                     )
-
-        st.session_state["all_messages"][st.session_state["session_id"]] = (
-            load_messages_for_ui(st.session_state["session_id"])
-        )
 
 
 if __name__ == "__main__":
