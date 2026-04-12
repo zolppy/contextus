@@ -6,7 +6,6 @@ import groq
 import pandas as pd
 import streamlit as st
 from pathlib import Path
-from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 from typing import Dict, Any, Union, List
 from sqlalchemy import create_engine, Engine, text
@@ -20,9 +19,8 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from langchain_community.agent_toolkits.sql.toolkit import SQLDatabaseToolkit
 
-load_dotenv()
 
-os.environ["GROQ_API_KEY"] = os.getenv(key="GROQ_API_KEY", default="")
+os.environ["GROQ_API_KEY"] = st.secrets["groq_api_key"]
 
 
 class SQLChatMessageHistory(BaseChatMessageHistory):
