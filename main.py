@@ -15,7 +15,6 @@ from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_community.agent_toolkits.sql.base import create_sql_agent
 from langchain_core.messages import BaseMessage, HumanMessage, AIMessage
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from langchain_community.agent_toolkits.sql.toolkit import SQLDatabaseToolkit
 
 
@@ -148,10 +147,7 @@ def create_sql_agent_with_db(db_path: str) -> Runnable[Any, Any]:
     engine = create_engine(db_path)
     db = SQLDatabase(engine=engine)
     llm = ChatGroq(
-        model="openai/gpt-oss-120b",
-        temperature=0.0,
-        streaming=True,
-        api_key=st.secrets["groq_api_key"],
+        model="openai/gpt-oss-120b", temperature=0.0, api_key=st.secrets["groq_api_key"]
     )
 
     system_prompt = """
@@ -381,10 +377,6 @@ def main() -> None:
                 ):
                     delete_session(sess_id)
                     st.rerun()
-
-        # A informação de versão serve mais para depuração, não será incluindo na versão final
-        st.divider()
-        st.caption("Versão: 1.0.0")
 
     agent = init_agent()
 
