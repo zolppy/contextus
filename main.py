@@ -1,4 +1,3 @@
-import os
 import re
 import json
 import uuid
@@ -18,9 +17,6 @@ from langchain_core.messages import BaseMessage, HumanMessage, AIMessage
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from langchain_community.agent_toolkits.sql.toolkit import SQLDatabaseToolkit
-
-
-os.environ["GROQ_API_KEY"] = st.secrets["groq_api_key"]
 
 
 class SQLChatMessageHistory(BaseChatMessageHistory):
@@ -151,7 +147,12 @@ def load_csvs_to_sqlite(docs_dir: Union[Path, str], db_path: str) -> Engine:
 def create_sql_agent_with_db(db_path: str) -> Runnable[Any, Any]:
     engine = create_engine(db_path)
     db = SQLDatabase(engine=engine)
-    llm = ChatGroq(model="openai/gpt-oss-120b", temperature=0.0, streaming=True)
+    llm = ChatGroq(
+        model="openai/gpt-oss-120b",
+        temperature=0.0,
+        streaming=True,
+        api_key=st.secrets["groq_api_key"],
+    )
 
     system_prompt = """
     Você é um assistente virtual especialista em índices educacionais disponíveis na plataforma Nilo Peçanha, como: dados de matrículas; reprovações; evasões; IFs (Institutos Federais); campi; cursos; modalidades de ensino; vagas; dentre outros. Sua função é sanar dúvidas com base exclusivamente nos dados disponibilizados por meio do mecanismo de recuperação RAG (Retrieval-Augmented Generation) que alimenta suas respostas.
