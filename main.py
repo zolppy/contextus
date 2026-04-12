@@ -194,6 +194,7 @@ def create_sql_agent_with_db(db_path: str) -> Runnable[Any, Any]:
         handle_parsing_errors=True,
         max_iterations=10,
         prompt=prompt_template,
+        return_intermediate_steps=False,
     )
 
     agent_with_history = RunnableWithMessageHistory(
