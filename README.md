@@ -1,10 +1,12 @@
 # 🤖 Contextus — Assistente Virtual para Dados Educacionais do IFBA
 
-[![Licença MIT](https://img.shields.io/badge/Licença-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.29+-red.svg)](https://streamlit.io/)
-[![LangChain](https://img.shields.io/badge/LangChain-0.1+-orange.svg)](https://www.langchain.com/)
-[![Status TCC](https://img.shields.io/badge/Status-TCC%20Licenciatura%20em%20Computação-blueviolet)](https://ifba.edu.br/jacobina)
+![Licença MIT](https://img.shields.io/badge/Licença-MIT-green?style=for-the-badge)
+![Python 3.13+](https://img.shields.io/badge/Python-3.13+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.56.0-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-0.4.1-7FC8FF?style=for-the-badge&logo=langchain&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-2.0.49-D71F00?style=for-the-badge&logo=sqlalchemy&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-3.0.2-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Finalizado-red?style=for-the-badge)
 
 **Contextus** é um assistente virtual inteligente que utiliza **Text‑to‑SQL** para responder perguntas sobre os indicadores educacionais do **Instituto Federal da Bahia (IFBA)** disponíveis na **Plataforma Nilo Peçanha (PNP)**. Desenvolvido como Trabalho de Conclusão de Curso da **Licenciatura em Computação – IFBA Campus Jacobina**.
 
