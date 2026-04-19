@@ -1,4 +1,3 @@
-```markdown
 # 🤖 Contextus — Assistente Virtual para Dados Educacionais do IFBA
 
 [![Licença MIT](https://img.shields.io/badge/Licença-MIT-green.svg)](https://opensource.org/licenses/MIT)
@@ -67,14 +66,38 @@ git clone https://github.com/seu-usuario/contextus.git
 cd contextus
 ```
 
-### 2. Crie um ambiente virtual (recomendado)
+### 2. Instale as dependências com `uv`
+
+O projeto já contém um arquivo `pyproject.toml` com todas as dependências declaradas. Para criar um ambiente virtual e instalar tudo automaticamente, execute:
 
 ```bash
-python -m venv venv
-source venv/bin/activate   # Linux/Mac
-# ou
-venv\Scripts\activate      # Windows
+uv sync
 ```
+
+Esse comando:
+- Cria um ambiente virtual (`.venv`) se ainda não existir.
+- Instala exatamente as versões especificadas no `pyproject.toml` (ou gera um `uv.lock` com resoluções precisas).
+
+Para ativar o ambiente virtual:
+
+```bash
+# Linux/Mac
+source .venv/bin/activate
+
+# Windows (PowerShell)
+.venv\Scripts\Activate.ps1
+
+# Windows (CMD)
+.venv\Scripts\activate.bat
+```
+
+Caso prefira usar `pip`, você pode gerar um `requirements.txt` a partir do `pyproject.toml` com:
+
+```bash
+uv pip compile pyproject.toml -o requirements.txt
+```
+
+Mas **recomendamos o uso direto do `uv`** para maior velocidade e reprodutibilidade.
 
 ### 3. Instale as dependências
 
