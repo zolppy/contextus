@@ -1,7 +1,7 @@
 [project]
 name = "tcc"
-version = "0.1.0"
-description = "Add your description here"
+version = "1.0.0"
+description = "Assistente virtual com IA (Text-to-SQL) para dados educacionais da Plataforma Nilo Peçanha do IFBA. TCC de Licenciatura em Computação – IFBA Campus Jacobina. Stack: Streamlit, LangChain, Groq e SQLite."
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
