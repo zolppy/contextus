@@ -208,4 +208,3 @@ Este projeto está licenciado sob a **Licença MIT** – veja o arquivo [LICENSE
 ---
 
 > *Contextus – Transformando dados educacionais em conhecimento acessível.*
-```
