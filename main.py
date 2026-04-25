@@ -377,10 +377,16 @@ def main() -> None:
         )
 
     # ----- CABEÇALHO DA INTERFACE -----
-    st.header("💬 :green[Conte]:red[xtus]")
-    st.subheader(
-        "Agente especializado em índices educacionais na plataforma Nilo Peçanha."
+    col_logo, col_title = st.columns(
+        [0.15, 0.85], gap="small", vertical_alignment="center"
     )
+    with col_logo:
+        st.image("assets/logo.jpg", width=120)
+    with col_title:
+        st.header("💬 :green[Conte]:red[xtus]")
+        st.subheader(
+            "Agente especializado em índices educacionais da plataforma Nilo Peçanha."
+        )
 
     MAX_SESSIONS = 6
 
