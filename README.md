@@ -194,7 +194,7 @@ Este projeto está licenciado sob a **Licença MIT** – veja o arquivo [LICENSE
 
 ## 👨‍🎓 Autor e Orientação
 
-**Desenvolvedor:** [Seu Nome Completo]  
+**Desenvolvedor:** Gabriel Cavalcante de Jesus Oliveira
 **Curso:** Licenciatura em Computação  
 **Instituição:** Instituto Federal da Bahia – Campus Jacobina  
 **Orientador(a):** Ivo Chaves de França
