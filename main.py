@@ -43,9 +43,7 @@ class SQLChatMessageHistory(BaseChatMessageHistory):
     def _ensure_table(self):
         """Garante que a tabela de histórico exista antes de tentar ler ou gravar."""
         with self.engine.connect() as conn:
-            conn.execute(
-                text(
-                    """
+            conn.execute(text("""
                 CREATE TABLE IF NOT EXISTS chat_messages (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     session_id TEXT NOT NULL,
@@ -53,9 +51,7 @@ class SQLChatMessageHistory(BaseChatMessageHistory):
                     content TEXT NOT NULL,
                     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
                 )
-            """
-                )
-            )
+            """))
             conn.commit()
 
     @property
@@ -111,9 +107,7 @@ def load_all_sessions(db_path: str = "sqlite:///database.db") -> List[str]:
     engine = create_engine(db_path)
     with engine.connect() as conn:
         # Tenta criar a tabela caso o app seja iniciado e a primeira ação seja ler sessões
-        conn.execute(
-            text(
-                """
+        conn.execute(text("""
             CREATE TABLE IF NOT EXISTS chat_messages (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 session_id TEXT NOT NULL,
@@ -121,22 +115,16 @@ def load_all_sessions(db_path: str = "sqlite:///database.db") -> List[str]:
                 content TEXT NOT NULL,
                 timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
             )
-        """
-            )
-        )
+        """))
         conn.commit()
 
         # Agrupa pelo ID da sessão, ordenando da conversa mais recente para a mais antiga
-        result = conn.execute(
-            text(
-                """
+        result = conn.execute(text("""
             SELECT session_id 
             FROM chat_messages 
             GROUP BY session_id 
             ORDER BY MAX(timestamp) DESC
-        """
-            )
-        )
+        """))
         return [row[0] for row in result]
 
 
@@ -198,7 +186,7 @@ def create_sql_agent_with_db(db_path: str) -> Runnable[Any, Any]:
 
     # Prompt do Sistema: Define rigidamente o comportamento do assistente.
     system_prompt = """
-    Seu nome é "Contextus", você é um assistente virtual especializado nos índices educacionais do Instituto Federal da Bahia (IFBA) disponíveis na Plataforma Nilo Peçanha (PNP), como: dados de matrículas; reprovações; evasões; campi; cursos; modalidades de ensino; vagas; dentre outros.
+    Seu nome é "Contextus", você é um assistente virtual especializado nos índices educacionais do Instituto Federal da Bahia (IFBA) disponíveis na Plataforma Nilo Peçanha (PNP).
 
     Sua função é sanar dúvidas com base exclusivamente nos dados estruturados do IFBA fornecidos por meio de um mecanismo de **Text-to-SQL**. Você recebe a pergunta, converte-a em uma consulta SQL, executa no banco de dados e utiliza os resultados para formular a resposta.
 
