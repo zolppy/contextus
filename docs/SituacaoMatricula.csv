@@ -1,66 +1,4 @@
 Ano;Região;UF;Estado;Organização Acadêmica PNP;Instituicao;Instituição (Nome);nomeUnidadeRecente;categoriaSituacao;nomeSituacao;FluxoRetido;Número de Matrículas
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Avançado Ubaitaba;Em curso;Em curso;Em fluxo;405
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Avançado Ubaitaba;Em curso;Em curso;Retido;90
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Avançado Ubaitaba;Evadidos;Abandono;Em fluxo;23
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Avançado Ubaitaba;Evadidos;Desligada;Em fluxo;1
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Barreiras;Concluintes;Concluída;Em fluxo;101
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Barreiras;Concluintes;Integralizada;Em fluxo;44
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Barreiras;Em curso;Em curso;Em fluxo;549
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Barreiras;Em curso;Em curso;Retido;300
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Barreiras;Evadidos;Abandono;Em fluxo;1
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Barreiras;Evadidos;Desligada;Em fluxo;16
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Barreiras;Evadidos;Transf. externa;Em fluxo;16
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Brumado;Concluintes;Concluída;Em fluxo;22
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Brumado;Concluintes;Integralizada;Em fluxo;6
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Brumado;Em curso;Em curso;Em fluxo;463
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Brumado;Em curso;Em curso;Retido;51
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Brumado;Evadidos;Abandono;Em fluxo;83
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Brumado;Evadidos;Desligada;Em fluxo;18
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Brumado;Evadidos;Transf. externa;Em fluxo;21
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Camaçari;Concluintes;Concluída;Em fluxo;41
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Camaçari;Concluintes;Integralizada;Em fluxo;1
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Camaçari;Em curso;Em curso;Em fluxo;578
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Camaçari;Em curso;Em curso;Retido;40
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Camaçari;Evadidos;Abandono;Em fluxo;16
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Camaçari;Evadidos;Desligada;Em fluxo;22
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Camaçari;Evadidos;Transf. externa;Em fluxo;2
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Campo Formoso;Concluintes;Concluída;Em fluxo;175
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Campo Formoso;Evadidos;Abandono;Em fluxo;21
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Campo Formoso;Evadidos;Reprovado;Em fluxo;14
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Euclides da Cunha;Concluintes;Concluída;Em fluxo;81
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Euclides da Cunha;Concluintes;Integralizada;Em fluxo;27
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Euclides da Cunha;Em curso;Em curso;Em fluxo;440
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Euclides da Cunha;Em curso;Em curso;Retido;52
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Euclides da Cunha;Evadidos;Abandono;Em fluxo;117
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Euclides da Cunha;Evadidos;Desligada;Em fluxo;18
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Euclides da Cunha;Evadidos;Transf. externa;Em fluxo;22
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Eunápolis;Concluintes;Concluída;Em fluxo;109
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Eunápolis;Concluintes;Integralizada;Em fluxo;116
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Eunápolis;Em curso;Em curso;Em fluxo;850
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Eunápolis;Em curso;Em curso;Retido;295
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Eunápolis;Evadidos;Abandono;Em fluxo;139
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Eunápolis;Evadidos;Desligada;Em fluxo;1
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Eunápolis;Evadidos;Transf. externa;Em fluxo;28
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Feira de Santana;Concluintes;Concluída;Em fluxo;52
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Feira de Santana;Concluintes;Integralizada;Em fluxo;8
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Feira de Santana;Em curso;Em curso;Em fluxo;695
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Feira de Santana;Em curso;Em curso;Retido;269
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Feira de Santana;Evadidos;Abandono;Em fluxo;27
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Feira de Santana;Evadidos;Desligada;Em fluxo;3
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Feira de Santana;Evadidos;Transf. externa;Em fluxo;16
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Ilhéus;Concluintes;Concluída;Em fluxo;1108
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Ilhéus;Concluintes;Integralizada;Em fluxo;9
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Ilhéus;Em curso;Em curso;Em fluxo;630
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Ilhéus;Em curso;Em curso;Retido;426
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Ilhéus;Evadidos;Abandono;Em fluxo;129
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Ilhéus;Evadidos;Desligada;Em fluxo;282
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Ilhéus;Evadidos;Reprovado;Em fluxo;2
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Ilhéus;Evadidos;Transf. externa;Em fluxo;15
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Irecê;Concluintes;Concluída;Em fluxo;68
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Irecê;Em curso;Em curso;Em fluxo;634
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Irecê;Em curso;Em curso;Retido;168
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Irecê;Evadidos;Abandono;Em fluxo;13
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Irecê;Evadidos;Desligada;Em fluxo;16
 2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Concluintes;Concluída;Em fluxo;40
 2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Concluintes;Integralizada;Em fluxo;2
 2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Em curso;Em curso;Em fluxo;494
@@ -68,88 +6,34 @@ Ano;Região;UF;Estado;Organização Acadêmica PNP;Instituicao;Instituição (No
 2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Evadidos;Abandono;Em fluxo;40
 2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Evadidos;Desligada;Em fluxo;64
 2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Evadidos;Transf. externa;Em fluxo;7
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jaguaquara;Concluintes;Concluída;Em fluxo;327
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jaguaquara;Evadidos;Desligada;Em fluxo;9
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jaguaquara;Evadidos;Reprovado;Em fluxo;40
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jequié;Concluintes;Concluída;Em fluxo;122
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jequié;Concluintes;Integralizada;Em fluxo;6
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jequié;Em curso;Em curso;Em fluxo;571
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jequié;Em curso;Em curso;Retido;80
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jequié;Evadidos;Abandono;Em fluxo;9
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jequié;Evadidos;Desligada;Em fluxo;168
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jequié;Evadidos;Reprovado;Em fluxo;2
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jequié;Evadidos;Transf. externa;Em fluxo;49
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Juazeiro;Concluintes;Concluída;Em fluxo;36
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Juazeiro;Concluintes;Integralizada;Em fluxo;3
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Juazeiro;Em curso;Em curso;Em fluxo;343
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Juazeiro;Em curso;Em curso;Retido;118
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Juazeiro;Evadidos;Abandono;Em fluxo;109
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Juazeiro;Evadidos;Desligada;Em fluxo;8
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Juazeiro;Evadidos;Transf. externa;Em fluxo;30
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Lauro de Freitas;Concluintes;Integralizada;Em fluxo;4
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Lauro de Freitas;Em curso;Em curso;Em fluxo;331
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Lauro de Freitas;Em curso;Em curso;Retido;110
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Lauro de Freitas;Evadidos;Abandono;Em fluxo;167
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Lauro de Freitas;Evadidos;Desligada;Em fluxo;69
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Lauro de Freitas;Evadidos;Transf. externa;Em fluxo;1
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Paulo Afonso;Concluintes;Concluída;Em fluxo;86
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Paulo Afonso;Em curso;Em curso;Em fluxo;486
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Paulo Afonso;Em curso;Em curso;Retido;128
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Paulo Afonso;Evadidos;Abandono;Em fluxo;107
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Paulo Afonso;Evadidos;Desligada;Em fluxo;37
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Paulo Afonso;Evadidos;Transf. externa;Em fluxo;9
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Porto Seguro;Concluintes;Concluída;Em fluxo;20
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Porto Seguro;Em curso;Em curso;Em fluxo;564
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Porto Seguro;Em curso;Em curso;Retido;342
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Porto Seguro;Evadidos;Abandono;Em fluxo;105
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Porto Seguro;Evadidos;Desligada;Em fluxo;17
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Porto Seguro;Evadidos;Transf. externa;Em fluxo;12
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Salvador;Concluintes;Concluída;Em fluxo;596
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Salvador;Concluintes;Integralizada;Em fluxo;6
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Salvador;Em curso;Em curso;Em fluxo;3154
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Salvador;Em curso;Em curso;Retido;2890
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Salvador;Evadidos;Abandono;Em fluxo;332
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Salvador;Evadidos;Desligada;Em fluxo;433
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Salvador;Evadidos;Reprovado;Em fluxo;2
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Salvador;Evadidos;Transf. externa;Em fluxo;48
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Santo Amaro;Concluintes;Concluída;Em fluxo;2
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Santo Amaro;Concluintes;Integralizada;Em fluxo;20
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Santo Amaro;Em curso;Em curso;Em fluxo;474
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Santo Amaro;Em curso;Em curso;Retido;182
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Santo Amaro;Evadidos;Abandono;Em fluxo;99
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Santo Amaro;Evadidos;Desligada;Em fluxo;9
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Santo Amaro;Evadidos;Transf. externa;Em fluxo;4
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Santo Antônio de Jesus;Concluintes;Concluída;Em fluxo;155
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Santo Antônio de Jesus;Em curso;Em curso;Em fluxo;564
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Santo Antônio de Jesus;Em curso;Em curso;Retido;120
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Santo Antônio de Jesus;Evadidos;Abandono;Em fluxo;158
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Santo Antônio de Jesus;Evadidos;Desligada;Em fluxo;22
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Santo Antônio de Jesus;Evadidos;Reprovado;Em fluxo;33
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Santo Antônio de Jesus;Evadidos;Transf. externa;Em fluxo;13
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Seabra;Concluintes;Concluída;Em fluxo;109
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Seabra;Concluintes;Integralizada;Em fluxo;7
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Seabra;Em curso;Em curso;Em fluxo;464
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Seabra;Em curso;Em curso;Retido;71
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Seabra;Evadidos;Abandono;Em fluxo;40
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Seabra;Evadidos;Desligada;Em fluxo;3
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Simões Filho;Concluintes;Concluída;Em fluxo;80
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Simões Filho;Concluintes;Integralizada;Em fluxo;280
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Simões Filho;Em curso;Em curso;Em fluxo;1027
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Simões Filho;Em curso;Em curso;Retido;66
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Simões Filho;Evadidos;Abandono;Em fluxo;254
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Simões Filho;Evadidos;Desligada;Em fluxo;54
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Simões Filho;Evadidos;Transf. interna;Em fluxo;1
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Valença Tento;Concluintes;Concluída;Em fluxo;25
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Valença Tento;Concluintes;Integralizada;Em fluxo;7
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Valença Tento;Em curso;Em curso;Em fluxo;711
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Valença Tento;Em curso;Em curso;Retido;240
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Valença Tento;Evadidos;Abandono;Em fluxo;103
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Valença Tento;Evadidos;Desligada;Em fluxo;35
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Valença Tento;Evadidos;Transf. externa;Em fluxo;17
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Vitória da Conquista;Concluintes;Concluída;Em fluxo;307
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Vitória da Conquista;Concluintes;Integralizada;Em fluxo;21
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Vitória da Conquista;Em curso;Em curso;Em fluxo;1687
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Vitória da Conquista;Em curso;Em curso;Retido;672
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Vitória da Conquista;Evadidos;Desligada;Em fluxo;261
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Vitória da Conquista;Evadidos;Reprovado;Em fluxo;3
-2024;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Vitória da Conquista;Evadidos;Transf. externa;Em fluxo;11
+2023;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Concluintes;Concluída;Em fluxo;429
+2023;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Concluintes;Integralizada;Em fluxo;32
+2023;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Em curso;Em curso;Em fluxo;686
+2023;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Em curso;Em curso;Retido;61
+2023;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Evadidos;Abandono;Em fluxo;186
+2023;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Evadidos;Desligada;Em fluxo;60
+2023;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Evadidos;Reprovado;Em fluxo;19
+2023;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Evadidos;Transf. externa;Em fluxo;2
+2021;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Concluintes;Concluída;Em fluxo;211
+2021;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Concluintes;Integralizada;Em fluxo;1
+2021;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Em curso;Em curso;Em fluxo;616
+2021;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Em curso;Em curso;Retido;93
+2021;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Evadidos;Abandono;Em fluxo;33
+2021;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Evadidos;Desligada;Em fluxo;8
+2021;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Evadidos;Reprovado;Em fluxo;7
+2021;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Evadidos;Transf. externa;Em fluxo;9
+2018;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Concluintes;Concluída;Em fluxo;83
+2018;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Concluintes;Integralizada;Em fluxo;81
+2018;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Em curso;Em curso;Em fluxo;615
+2018;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Em curso;Em curso;Retido;137
+2018;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Evadidos;Abandono;Em fluxo;255
+2018;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Evadidos;Cancelada;Em fluxo;3
+2018;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Evadidos;Desligada;Em fluxo;53
+2018;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Evadidos;Transf. externa;Em fluxo;9
+2017;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Concluintes;Concluída;Em fluxo;149
+2017;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Em curso;Em curso;Em fluxo;595
+2017;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Em curso;Em curso;Retido;58
+2017;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Evadidos;Abandono;Em fluxo;176
+2017;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Evadidos;Desligada;Em fluxo;2
+2017;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Evadidos;Reprovado;Em fluxo;10
+2017;Nordeste;BA;Bahia;Instituto Federal;IFBA;Instituto Federal da Bahia;Campus Jacobina;Evadidos;Transf. externa;Em fluxo;10
