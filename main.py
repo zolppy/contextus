@@ -371,9 +371,9 @@ def main() -> None:
     with col_logo:
         st.image("assets/logo.jpg", width=120)
     with col_title:
-        st.header("💬 :green[Conte]:red[xtus]")
+        st.header("💬 :green[Contextus]")
         st.subheader(
-            "Agente especializado em índices educacionais da plataforma Nilo Peçanha."
+            "Agente especializado em dados de evasão do Campus Jacobina, disponíveis na Plataforma Nilo Peçanha."
         )
 
     MAX_SESSIONS = 6
