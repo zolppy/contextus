@@ -10,29 +10,31 @@
 
 **Contextus** é um assistente virtual inteligente que utiliza **Text‑to‑SQL** para responder perguntas sobre os indicadores educacionais do **Instituto Federal da Bahia (IFBA)** disponíveis na **Plataforma Nilo Peçanha (PNP)**. Desenvolvido como Trabalho de Conclusão de Curso da **Licenciatura em Computação – IFBA Campus Jacobina**.
 
-> 🔍 *“Transforme perguntas em consultas a banco de dados e obtenha respostas instantâneas com gráficos interativos.”*
+> 🔍 _“Transforme perguntas em consultas a banco de dados e obtenha respostas instantâneas com gráficos interativos.”_
 
 ---
 
-## 📌 Sobre o Projeto
+### 📌 Sobre o Projeto
 
-Este sistema foi concebido para apoiar **gestores, coordenadores e pesquisadores** do IFBA que precisam analisar dados educacionais (matrículas, evasão, cursos, campi, etc.) sem conhecimento técnico em SQL ou ferramentas de BI. O usuário faz uma pergunta em **português natural** e o Contextus:
+Este sistema foi concebido para apoiar **gestores, coordenadores e pesquisadores** do IFBA – **Campus Jacobina** que precisam analisar indicadores de **evasão**, a partir de dados estruturados na Plataforma Nilo Peçanha (PNP), de forma facilitada. O usuário faz uma pergunta em **português natural** e o Contextus:
 
 1. Converte a pergunta em uma consulta SQL.
-2. Executa a consulta em um banco de dados local (SQLite).
-3. Devolve a resposta em texto e, quando apropriado, gera **gráficos dinâmicos** (barras ou linhas).
+2. Executa a consulta em um banco de dados local (SQLite) contendo **exclusivamente os dados de evasão do Campus Jacobina**.
+3. Devolve a resposta em texto e, quando apropriado, gera **gráficos dinâmicos**.
 
-O projeto integra um **Large Language Model (LLM)** via API da Groq com um agente LangChain especializado em SQL, tudo encapsulado em uma interface web amigável construída com Streamlit.
+🌐 **Acesso gratuito via web:** O sistema está hospedado em **[https://contextus.streamlit.app](https://contextus.streamlit.app)** e pode ser utilizado sem necessidade de instalação.
+
+**Trata-se de um protótipo desenvolvido como Trabalho de Conclusão de Curso (TCC) da Licenciatura em Computação do IFBA Campus Jacobina, sob orientação do Prof. Ivo Chaves de França.**
 
 ---
 
-## ✨ Funcionalidades Principais
+### ✨ Funcionalidades Principais
 
-- 🧠 **Text‑to‑SQL real**: perguntas em linguagem natural são transformadas em consultas SQL executáveis.
-- 📊 **Visualização automática**: gráficos de barra e linha são gerados a partir dos dados retornados.
-- 🗂️ **Ingestão de dados via CSV**: basta colocar os arquivos da PNP na pasta `docs/` e o sistema os carrega automaticamente.
-- 🧾 **Memória de conversa**: cada sessão mantém o histórico de perguntas e respostas (armazenado em SQLite).
-- 🏫 **Foco exclusivo no IFBA**: o agente responde apenas com base nos dados fornecidos, nunca inventando informações.
+- 🧠 **Text‑to‑SQL real**: perguntas em linguagem natural sobre **evasão** são transformadas em consultas SQL executáveis.
+- 📊 **Visualização automática**: gráficos de barra são gerados a partir dos dados retornados (ex.: taxa de evasão por curso, evolução anual de abandono, etc.).
+- 🗂️ **Ingestão de dados via CSV**: basta colocar os arquivos da PNP (com foco em evasão) na pasta `docs/` e o sistema os carrega automaticamente. **Os arquivos fornecidos contemplam apenas o Campus Jacobina.**
+- 🧾 **Memória de conversa**: cada sessão mantém o histórico de perguntas e respostas.
+- 🏫 **Foco exclusivo no IFBA – Campus Jacobina**: o agente responde apenas com base nos dados de evasão desse campus, nunca inventando informações.
 - 📁 **Gerenciamento de múltiplas conversas**: até 6 sessões simultâneas, com opção de exclusão.
 - 🔒 **Segurança**: chaves de API protegidas via `secrets.toml` do Streamlit.
 
@@ -40,14 +42,14 @@ O projeto integra um **Large Language Model (LLM)** via API da Groq com um agent
 
 ## 🛠️ Tecnologias Utilizadas
 
-| Categoria           | Ferramentas / Bibliotecas                                  |
-| ------------------- | ---------------------------------------------------------- |
-| **Frontend**        | [Streamlit](https://streamlit.io/)                         |
-| **LLM & Agentes**   | [LangChain](https://www.langchain.com/), [Groq API](https://groq.com/) |
-| **Banco de Dados**  | SQLite (via SQLAlchemy)                                    |
-| **Manipulação de Dados** | Pandas                                                |
-| **Linguagem**       | Python 3.13+                                               |
-| **Visualização**    | Streamlit Charts (nativo)                                  |
+| Categoria                | Ferramentas / Bibliotecas                                              |
+| ------------------------ | ---------------------------------------------------------------------- |
+| **Frontend**             | [Streamlit](https://streamlit.io/)                                     |
+| **LLM & Agentes**        | [LangChain](https://www.langchain.com/), [Groq API](https://groq.com/) |
+| **Banco de Dados**       | SQLite (via SQLAlchemy)                                                |
+| **Manipulação de Dados** | Pandas                                                                 |
+| **Linguagem**            | Python 3.13+                                                           |
+| **Visualização**         | Streamlit Charts (nativo)                                              |
 
 ---
 
@@ -77,6 +79,7 @@ uv sync
 ```
 
 Esse comando:
+
 - Cria um ambiente virtual (`.venv`) se ainda não existir.
 - Instala exatamente as versões especificadas no `pyproject.toml` (ou gera um `uv.lock` com resoluções precisas).
 
@@ -108,6 +111,7 @@ pip install -r requirements.txt
 ```
 
 > **Nota:** Caso o arquivo `requirements.txt` não exista, crie‑o com o conteúdo abaixo:
+>
 > ```
 > streamlit>=1.56.0
 > langchain-groq>=1.1.2
@@ -130,6 +134,7 @@ groq_api_key = "sua-chave-aqui"
 Coloque os arquivos CSV da Plataforma Nilo Peçanha (ou qualquer outro CSV com os dados do IFBA) dentro da pasta **`docs/`**. O sistema espera arquivos com separador `;` (padrão de exportação da PNP). Os arquivos serão convertidos automaticamente em tabelas SQLite com o nome igual ao nome do arquivo.
 
 Exemplo:
+
 ```
 docs/
   ├── DadosGerais.csv
@@ -153,9 +158,9 @@ A aplicação abrirá automaticamente no seu navegador (geralmente em `http://lo
 
 - Utilize a barra lateral para criar uma **nova conversa** ou acessar o histórico.
 - Digite perguntas como:
-  - *"Quantos alunos ingressaram no IFBA em 2024?"*
-  - *"Qual o número de matrículas por campus?"*
-  - *"Mostre um gráfico com a evasão por curso."*
+  - _"Qual a taxa de evasão por curso em 2024?"_
+  - _"Quantos alunos evadiram do curso Técnico em Informática?"_
+  - _"Mostre um gráfico da evolução da evasão no Campus Jacobina."_
 - A resposta aparecerá em texto e, quando relevante, um gráfico será exibido abaixo.
 
 ---
@@ -201,12 +206,13 @@ Este projeto está licenciado sob a **Licença MIT** – veja o arquivo [LICENSE
 
 ---
 
-## 🙏 Agradecimentos
+### 🙏 Agradecimentos
 
-- À **Plataforma Nilo Peçanha** por disponibilizar os dados públicos da Rede Federal de Educação Profissional.
+- À **Plataforma Nilo Peçanha** por disponibilizar os dados públicos da Rede Federal.
 - Ao **IFBA Campus Jacobina** pelo suporte e formação.
-- À comunidade open‑source pelas bibliotecas que tornaram este projeto possível.
+- Ao orientador **Prof. Ivo Chaves de França**.
+- À comunidade open‑source pelas bibliotecas que tornaram este protótipo possível.
 
 ---
 
-> *Contextus – Transformando dados educacionais em conhecimento acessível.*
+> _Contextus – Transformando dados educacionais em conhecimento acessível._
