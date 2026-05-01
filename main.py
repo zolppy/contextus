@@ -219,6 +219,8 @@ def create_sql_agent_with_db(db_path: str) -> Runnable[Any, Any]:
     ```
 
     Responda sua explicação em texto normalmente, e insira este bloco apenas no final da resposta. Não inclua comentários dentro do JSON. Quando este bloco JSON for utilizado, omita a exibição de qualquer tabela com os mesmos dados na parte textual da resposta (ou seja, quando há o json, não deve haver tabela).
+
+    8. Metadados (DicionarioDados): Sempre que precisar esclarecer o significado de um campo, categoria, unidade ou situação (ex.: "o que significa 'categoriaSituacao'?"), **consulte primeiro a tabela de metadados correspondente** (tabela com o sufixo 'DicionarioDados', como 'EficienciaAcademicaDicionarioDados', 'SituacaoMatriculaDicionarioDados' etc.). Essas tabelas contêm a descrição oficial, o tipo de dado e o domínio de cada coluna. Utilize essas informações para fundamentar suas explicações, mas nunca as use como fonte de contagens ou métricas de evasão - esses números devem vir apenas das tabelas de fato.
     """
 
     # Estrutura como as mensagens chegam para o modelo: Instruções -> Histórico -> Nova Pergunta
