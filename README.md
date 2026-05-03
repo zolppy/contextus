@@ -14,6 +14,25 @@
 
 ---
 
+## 📑 Tabela de Conteúdos
+
+- [Sobre o Projeto](#sobre-o-projeto)
+- [Escopo e Limitações](#escopo-e-limitações)
+- [Funcionalidades Principais](#funcionalidades-principais)
+- [Primeiros Passos (Exemplos de Perguntas)](#primeiros-passos-exemplos-de-perguntas)
+- [Entendendo os Indicadores](#entendendo-os-indicadores)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Pré‑requisitos](#pré-requisitos)
+- [Instalação e Configuração](#instalação-e-configuração)
+- [Como Executar](#como-executar)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Como Contribuir](#como-contribuir)
+- [Licença](#licença)
+- [Autor e Orientação](#autor-e-orientação)
+- [Agradecimentos](#agradecimentos)
+
+---
+
 ### 📌 Sobre o Projeto
 
 Este sistema foi concebido para apoiar **gestores, coordenadores e pesquisadores** do IFBA – **Campus Jacobina** que precisam analisar indicadores de **evasão**, a partir de dados estruturados na Plataforma Nilo Peçanha (PNP), de forma facilitada. O usuário faz uma pergunta em **português natural** e o Contextus:
