@@ -500,7 +500,7 @@ def main() -> None:
 
         # 2. Processa e exibe a resposta da IA
         with st.chat_message("assistant"):
-            with st.spinner("Consultando banco de dados do IFBA (Text-to-SQL)..."):
+            with st.spinner("Analisando dados, por favor, aguarde..."):
                 try:
                     # Passa o ID da sessão para que a IA lembre do contexto (perguntas anteriores)
                     config: RunnableConfig = {
