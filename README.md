@@ -33,6 +33,8 @@
 
 ---
 
+<a id="-sobre-o-projeto"></a>
+
 ### 📌 Sobre o Projeto
 
 Este sistema foi concebido para apoiar **gestores, coordenadores e pesquisadores** do IFBA – **Campus Jacobina** que precisam analisar indicadores de **evasão**, a partir de dados estruturados na Plataforma Nilo Peçanha (PNP), de forma facilitada. O usuário faz uma pergunta em **português natural** e o Contextus:
@@ -47,6 +49,8 @@ Este sistema foi concebido para apoiar **gestores, coordenadores e pesquisadores
 
 ---
 
+<a id="-escopo-e-limitações"></a>
+
 ### 📌 Escopo e Limitações
 
 - **Escopo atual:** O assistente responde **exclusivamente** sobre os dados de evasão do **Campus Jacobina** do IFBA. Consultas sobre outros campi, comparações entre campi ou dados de outras instituições estão fora do escopo.
@@ -54,6 +58,8 @@ Este sistema foi concebido para apoiar **gestores, coordenadores e pesquisadores
 - **Indicadores disponíveis:** Concluídos, Evadidos, Retidos, Taxa de Evasão, Índice de Eficiência Acadêmica. As definições exatas estão na seção [Entendendo os Indicadores](#-entendendo-os-indicadores).
 
 ---
+
+<a id="-funcionalidades-principais"></a>
 
 ### ✨ Funcionalidades Principais
 
@@ -66,6 +72,8 @@ Este sistema foi concebido para apoiar **gestores, coordenadores e pesquisadores
 - 🔒 **Segurança**: chaves de API protegidas via `secrets.toml` do Streamlit.
 
 ---
+
+<a id="-primeiros-passos-exemplos-de-perguntas"></a>
 
 ### 🧭 Primeiros Passos (Exemplos de Perguntas)
 
@@ -82,6 +90,8 @@ Se o assistente não souber responder, ele indicará que os dados não estão di
 
 ---
 
+<a id="-entendendo-os-indicadores"></a>
+
 ### 📊 Entendendo os Indicadores
 
 - **Eficiência Acadêmica | Concluídos**: número de alunos que concluíram o curso no ciclo de referência.
@@ -94,6 +104,8 @@ Se o assistente não souber responder, ele indicará que os dados não estão di
 Para definições mais detalhadas, consulte os dicionários de dados em `docs/EficienciaAcademicaDicionarioDados.csv`, `docs/SituacaoMatriculaDicionarioDados.csv` e `docs/TaxaEvasaoDicionarioDados.csv`.
 
 ---
+
+<a id="-tecnologias-utilizadas"></a>
 
 ## 🔧 Tecnologias Utilizadas
 
@@ -204,6 +216,8 @@ docs/
 
 ---
 
+<a id="-como-executar"></a>
+
 ## 🚀 Como Executar
 
 Com o ambiente virtual ativado e os dados na pasta `docs/`, execute:
@@ -224,6 +238,8 @@ A aplicação abrirá automaticamente no seu navegador (geralmente em `http://lo
 - A resposta aparecerá em texto e, quando relevante, um gráfico será exibido abaixo.
 
 ---
+
+<a id="-estrutura-do-projeto"></a>
 
 ## 📁 Estrutura do Projeto
 
@@ -252,17 +268,23 @@ contextus/
 
 ---
 
+<a id="-como-contribuir"></a>
+
 ## 🤝 Como Contribuir
 
 Sugestões, relatos de bugs e ideias podem ser enviadas via **Issues** do GitHub.
 
 ---
 
+<a id="-licença"></a>
+
 ## 📄 Licença
 
 Este projeto está licenciado sob a **Licença MIT** – veja o arquivo [LICENSE](LICENSE) para detalhes.
 
 ---
+
+<a id="-autor-e-orientação"></a>
 
 ## 👨‍🎓 Autor e Orientação
 
@@ -272,6 +294,8 @@ Este projeto está licenciado sob a **Licença MIT** – veja o arquivo [LICENSE
 **Orientador(a):** Ivo Chaves de França
 
 ---
+
+<a id="-agradecimentos"></a>
 
 ### 🙏 Agradecimentos
 
