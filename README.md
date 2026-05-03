@@ -16,20 +16,20 @@
 
 ## 📑 Tabela de Conteúdos
 
-- [Sobre o Projeto](#sobre-o-projeto)
-- [Escopo e Limitações](#escopo-e-limitações)
-- [Funcionalidades Principais](#funcionalidades-principais)
-- [Primeiros Passos (Exemplos de Perguntas)](#primeiros-passos-exemplos-de-perguntas)
-- [Entendendo os Indicadores](#entendendo-os-indicadores)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Pré‑requisitos](#pré-requisitos)
-- [Instalação e Configuração](#instalação-e-configuração)
-- [Como Executar](#como-executar)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Como Contribuir](#como-contribuir)
-- [Licença](#licença)
-- [Autor e Orientação](#autor-e-orientação)
-- [Agradecimentos](#agradecimentos)
+- [Sobre o Projeto](#-sobre-o-projeto)
+- [Escopo e Limitações](#-escopo-e-limitações)
+- [Funcionalidades Principais](#-funcionalidades-principais)
+- [Primeiros Passos (Exemplos de Perguntas)](#-primeiros-passos-exemplos-de-perguntas)
+- [Entendendo os Indicadores](#-entendendo-os-indicadores)
+- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [Pré‑requisitos](#-pré-requisitos)
+- [Instalação e Configuração](#-instalação-e-configuração)
+- [Como Executar](#-como-executar)
+- [Estrutura do Projeto](#-estrutura-do-projeto)
+- [Como Contribuir](#-como-contribuir)
+- [Licença](#-licença)
+- [Autor e Orientação](#-autor-e-orientação)
+- [Agradecimentos](#-agradecimentos)
 
 ---
 
@@ -95,7 +95,7 @@ Para definições mais detalhadas, consulte os dicionários de dados em `docs/Ef
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🔧 Tecnologias Utilizadas
 
 | Categoria                | Ferramentas / Bibliotecas                                              |
 | ------------------------ | ---------------------------------------------------------------------- |
@@ -108,6 +108,8 @@ Para definições mais detalhadas, consulte os dicionários de dados em `docs/Ef
 
 ---
 
+<a id="-pré-requisitos"></a>
+
 ## 📋 Pré‑requisitos
 
 - Python 3.13 ou superior
@@ -115,6 +117,8 @@ Para definições mais detalhadas, consulte os dicionários de dados em `docs/Ef
 - Uma chave de API da [Groq](https://console.groq.com/) (gratuita para testes)
 
 ---
+
+<a id="-instalação-e-configuração"></a>
 
 ## ⚙️ Instalação e Configuração
 
