@@ -28,6 +28,14 @@ Este sistema foi concebido para apoiar **gestores, coordenadores e pesquisadores
 
 ---
 
+### 📌 Escopo e Limitações
+
+- **Escopo atual:** O assistente responde **exclusivamente** sobre os dados de evasão do **Campus Jacobina** do IFBA. Consultas sobre outros campi, comparações entre campi ou dados de outras instituições estão fora do escopo.
+- **Período dos dados:** Os arquivos fornecidos cobrem os anos de 2017 a 2024, dependendo da tabela. Consulte os dicionários de dados para detalhes.
+- **Indicadores disponíveis:** Concluídos, Evadidos, Retidos, Taxa de Evasão, Índice de Eficiência Acadêmica. As definições exatas estão na seção [Entendendo os Indicadores](#-entendendo-os-indicadores).
+
+---
+
 ### ✨ Funcionalidades Principais
 
 - 🧠 **Text‑to‑SQL real**: perguntas em linguagem natural sobre **evasão** são transformadas em consultas SQL executáveis.
@@ -37,6 +45,34 @@ Este sistema foi concebido para apoiar **gestores, coordenadores e pesquisadores
 - 🏫 **Foco exclusivo no IFBA – Campus Jacobina**: o agente responde apenas com base nos dados de evasão desse campus, nunca inventando informações.
 - 📁 **Gerenciamento de múltiplas conversas**: até 6 sessões simultâneas, com opção de exclusão.
 - 🔒 **Segurança**: chaves de API protegidas via `secrets.toml` do Streamlit.
+
+---
+
+### 🧭 Primeiros Passos (Exemplos de Perguntas)
+
+Depois de acessar ou instalar o sistema, experimente fazer perguntas como:
+
+- _“Qual a taxa de evasão do Campus Jacobina em 2024?”_
+- _“Quantos alunos evadiram do curso Técnico em Informática no último ano?”_
+- _“Evolução anual do número de concluintes desde 2017.”_
+- _“Comparar a evasão entre cursos integrados e subsequentes.”_
+- _“Qual curso teve a maior taxa de evasão em 2023?”_
+- _“Mostre um gráfico do número de evasões por curso desde 2017.”_
+
+Se o assistente não souber responder, ele indicará que os dados não estão disponíveis ou que a pergunta está fora do escopo.
+
+---
+
+### 📊 Entendendo os Indicadores
+
+- **Eficiência Acadêmica | Concluídos**: número de alunos que concluíram o curso no ciclo de referência.
+- **Eficiência Acadêmica | Concluídos %**: percentual de concluintes em relação às matrículas dos ciclos concluídos no ano anterior.
+- **Eficiência Acadêmica | Índice de Eficiência Acadêmica %**: medida que combina o percentual de concluintes com uma projeção dos retidos que ainda podem concluir. É um indicador composto da eficiência do curso.
+- **Eficiência Acadêmica | Número de Evadidos**: alunos que abandonaram, foram desligados, transferidos ou reprovados (dependendo da categoria) no período.
+- **Eficiência Acadêmica | Retidos**: alunos que ultrapassaram o prazo previsto para conclusão, mas ainda estão matriculados.
+- **Taxa de Evasão %**: percentual de evadidos em relação ao total de matrículas dos ciclos concluídos no ano anterior.
+
+Para definições mais detalhadas, consulte os dicionários de dados em `docs/EficienciaAcademicaDicionarioDados.csv`, `docs/SituacaoMatriculaDicionarioDados.csv` e `docs/TaxaEvasaoDicionarioDados.csv`.
 
 ---
 
@@ -137,9 +173,10 @@ Exemplo:
 
 ```
 docs/
-  ├── DadosGerais.csv
+  ├── EficienciaAcademica.csv
   ├── SituacaoMatricula.csv
-  └── ...
+  ├── TaxaEvasao.csv
+  └── ... (arquivos de dicionário de dados)
 ```
 
 ---
@@ -170,14 +207,21 @@ A aplicação abrirá automaticamente no seu navegador (geralmente em `http://lo
 ```
 contextus/
 ├── main.py                 # Código principal da aplicação Streamlit
-├── requirements.txt        # Dependências do projeto
+├── pyproject.toml          # Definição do projeto e dependências (uv)
+├── uv.lock                 # Lockfile do uv (versões exatas)
 ├── README.md               # Este arquivo
+├── CHANGELOG.md            # Histórico de alterações (a ser criado)
+├── CONTRIBUTING.md         # Guia para contribuidores (a ser criado)
 ├── .gitignore              # Arquivos ignorados pelo Git
 ├── .streamlit/
 │   └── secrets.toml        # Chave da API (não versionado)
+├── assets/
+│   └── logo.jpg            # Logotipo do IFBA Campus Jacobina
 ├── docs/                   # Pasta para os arquivos CSV (não versionada)
-│   ├── DadosGerais.csv
-│   └── SituacaoMatricula.csv
+│   ├── EficienciaAcademica.csv
+│   ├── SituacaoMatricula.csv
+│   ├── TaxaEvasao.csv
+│   └── ... (dicionários de dados)
 └── database.db             # Banco SQLite gerado automaticamente (não versionado)
 ```
 
