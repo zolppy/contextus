@@ -210,15 +210,35 @@ def load_csvs_to_sqlite(docs_dir: Union[Path, str], db_path: str) -> Engine:
 
 
 def create_sql_agent_with_db(db_path: str) -> Runnable[Any, Any]:
+    """
+    Cria o agente Text-to-SQL completo, pronto para ser executado com histórico de conversas.
+
+    Etapas:
+      1. Conecta ao banco SQLite gerado a partir dos CSVs.
+      2. Constrói o esquema (com descrições das colunas) para orientar o LLM.
+      3. Define o modelo de linguagem (LLM) da Groq.
+      4. Cria a cadeia de geração de SQL (prompt -> LLM -> parser -> limpeza).
+      5. Cria o prompt de resposta final (texto + definição de gráfico).
+      6. Define a função de execução do SQL contra o banco.
+      7. Encadeia tudo usando RunnablePassthrough.
+      8. Envolve a cadeia com RunnableWithMessageHistory para manter contexto da conversa.
+    """
+
+    # ----- 1. Conexão com o banco de dados -----
     engine = create_engine(db_path)
     db = SQLDatabase(engine=engine)
 
+    # ----- 2. Metadata do esquema (nomes de tabelas, colunas e descrições) -----
     metadata = build_schema_metadata(engine)
 
+    # ----- 3. Modelo de linguagem (LLM) -----
     llm = ChatGroq(
-        model="openai/gpt-oss-120b", temperature=0.0, api_key=st.secrets["groq_api_key"]
+        model="openai/gpt-oss-120b",
+        temperature=0.0,  # Zero para respostas determinísticas
+        api_key=st.secrets["groq_api_key"],
     )
 
+    # ----- 4. Prompt e cadeia de geração de SQL -----
     sql_generation_prompt = ChatPromptTemplate.from_messages(
         [
             (
@@ -238,11 +258,12 @@ def create_sql_agent_with_db(db_path: str) -> Runnable[Any, Any]:
                 {metadata}
                 """,
             ),
-            MessagesPlaceholder(variable_name="chat_history"),
-            ("human", "{input}"),
+            MessagesPlaceholder(variable_name="chat_history"),  # Histórico da conversa
+            ("human", "{input}"),  # Pergunta atual
         ]
     )
 
+    # Encadeia: prompt -> LLM -> extração de string -> limpeza de markdown
     generate_sql = (
         sql_generation_prompt
         | llm
@@ -250,6 +271,7 @@ def create_sql_agent_with_db(db_path: str) -> Runnable[Any, Any]:
         | (lambda sql: sql.strip().replace("```sql", "").replace("```", ""))
     )
 
+    # ----- 5. Prompt final para a resposta contextualizada (com gráficos) -----
     final_response_prompt = ChatPromptTemplate.from_messages(
         [
             (
@@ -291,7 +313,9 @@ def create_sql_agent_with_db(db_path: str) -> Runnable[Any, Any]:
         ]
     )
 
+    # ----- 6. Função de execução do SQL gerado -----
     def execute_sql(sql: str) -> str:
+        """Executa a consulta SQL e retorna o resultado como string."""
         if sql.upper() == "N/A" or not sql:
             return "N/A"
         try:
@@ -300,9 +324,13 @@ def create_sql_agent_with_db(db_path: str) -> Runnable[Any, Any]:
         except Exception as e:
             return f"Erro na consulta: {e}"
 
+    # ----- 7. Construção da cadeia principal (pipeline) -----
     chain = (
+        # Passo 1: gera a consulta SQL e adiciona ao dicionário "query"
         RunnablePassthrough.assign(query=generate_sql)
+        # Passo 2: executa o SQL e adiciona o resultado em "raw_result"
         | RunnablePassthrough.assign(raw_result=lambda x: execute_sql(x["query"]))
+        # Passo 3: formata a resposta final (texto + JSON de gráfico) usando o LLM
         | RunnablePassthrough.assign(
             output=lambda x: (final_response_prompt | llm | StrOutputParser()).invoke(
                 {
@@ -313,14 +341,16 @@ def create_sql_agent_with_db(db_path: str) -> Runnable[Any, Any]:
                 }
             )
         )
+        # Passo 4: extrai apenas o campo "output" para a resposta final
         | (lambda x: {"output": x["output"]})
     )
 
+    # ----- 8. Agente com histórico de conversa (memória) -----
     agent_with_history = RunnableWithMessageHistory(
         runnable=chain,
-        get_session_history=get_session_history,
-        input_messages_key="input",
-        history_messages_key="chat_history",
+        get_session_history=get_session_history,  # Função que resgata a memória da sessão
+        input_messages_key="input",  # Chave de entrada da mensagem do usuário
+        history_messages_key="chat_history",  # Chave onde o histórico será injetado
     )
 
     return agent_with_history
