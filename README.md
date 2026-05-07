@@ -3,7 +3,7 @@
 ![Status](https://img.shields.io/badge/Status-Finalizado-red?style=for-the-badge)
 ![Acesso](https://img.shields.io/badge/Acesso-Gratuito%20via%20Web-green?style=for-the-badge)
 
-**Contextus** é um assistente virtual inteligente que responde perguntas sobre os **indicadores educacionais** do **Instituto Federal da Bahia – Campus Jacobina**, a partir dos dados públicos da **Plataforma Nilo Peçanha (PNP)**. Desenvolvido como Trabalho de Conclusão de Curso da **Licenciatura em Computação – IFBA Campus Jacobina**.
+**Contextus** é parte do meu Trabalho de Conclusão de Curso do curso de Licenciatura em Computação do Instituto Federal de Educação, Ciência e Tecnologia da Bahia, Campus Jacobina. Trata-se de um protótipo de assistente virtual inteligente que responde perguntas sobre os **indicadores educacionais** do **Instituto Federal da Bahia – Campus Jacobina**, a partir dos dados públicos da **Plataforma Nilo Peçanha (PNP)**.
 
 > 🔍 _“Transformando dados educacionais em conhecimento acessível.”_
 
@@ -43,9 +43,9 @@ O Contextus foi criado para apoiar **gestores, coordenadores e pesquisadores** d
 
 ## 📌 Escopo e Limitações
 
-- **O que o assistente sabe responder:** apenas perguntas relacionadas aos **dados de evasão do Campus Jacobina** do IFBA.
+- **O que o assistente sabe responder:** apenas perguntas relacionadas aos **dados de evasão do Campus Jacobina** do IFBA disponíveis na PNP.
 - **O que ele NÃO responde:** consultas sobre outros campi, outras instituições, comparações entre IFs ou temas fora do domínio da evasão do Campus Jacobina.
-- **Período dos dados:** os arquivos utilizados cobrem, em média, os anos de **2017 a 2024**, dependendo da tabela. Consulte os dicionários de dados para detalhes.
+- **Período dos dados:** os arquivos utilizados cobrem os anos de **2017 a 2024**, dependendo da tabela. Consulte os dicionários de dados para detalhes.
 - **Indicadores disponíveis:** Concluídos, Evadidos, Retidos, Taxa de Evasão, Índice de Eficiência Acadêmica. As definições exatas estão na seção [Entendendo os Indicadores](#-entendendo-os-indicadores).
 
 ---
