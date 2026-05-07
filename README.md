@@ -11,20 +11,21 @@
 
 ## 📑 Tabela de Conteúdos
 
-- [Sobre o Projeto](#-sobre-o-projeto)
-- [Escopo e Limitações](#-escopo-e-limitações)
-- [Funcionalidades Principais](#-funcionalidades-principais)
-- [Como Acessar](#-como-acessar)
-- [Primeiros Passos (Exemplos de Perguntas)](#-primeiros-passos-exemplos-de-perguntas)
-- [Entendendo os Indicadores](#-entendendo-os-indicadores)
-- [Dúvidas Frequentes](#-dúvidas-frequentes)
-- [Autor e Orientação](#-autor-e-orientação)
-- [Licença](#-licença)
-- [Agradecimentos](#-agradecimentos)
+- [Sobre o Projeto](#sobre-o-projeto)
+- [Escopo e Limitações](#escopo-e-limitações)
+- [Funcionalidades Principais](#funcionalidades-principais)
+- [Como Acessar](#como-acessar)
+- [Primeiros Passos (Exemplos de Perguntas)](#primeiros-passos-exemplos-de-perguntas)
+- [Entendendo os Indicadores](#entendendo-os-indicadores)
+- [Conjuntos de Dados Disponíveis](#conjuntos-de-dados-disponíveis)
+- [Dúvidas Frequentes](#dúvidas-frequentes)
+- [Autor e Orientação](#autor-e-orientação)
+- [Licença](#licença)
+- [Agradecimentos](#agradecimentos)
 
 ---
 
-<a id="-sobre-o-projeto"></a>
+<a id="sobre-o-projeto"></a>
 
 ## 📌 Sobre o Projeto
 
@@ -38,7 +39,7 @@ O Contextus foi criado para apoiar **gestores, coordenadores e pesquisadores** d
 
 ---
 
-<a id="-escopo-e-limitações"></a>
+<a id="escopo-e-limitações"></a>
 
 ## 📌 Escopo e Limitações
 
@@ -49,7 +50,7 @@ O Contextus foi criado para apoiar **gestores, coordenadores e pesquisadores** d
 
 ---
 
-<a id="-funcionalidades-principais"></a>
+<a id="funcionalidades-principais"></a>
 
 ## ✨ Funcionalidades Principais
 
@@ -61,7 +62,7 @@ O Contextus foi criado para apoiar **gestores, coordenadores e pesquisadores** d
 
 ---
 
-<a id="-como-acessar"></a>
+<a id="como-acessar"></a>
 
 ## 🌐 Como Acessar
 
@@ -74,7 +75,7 @@ O Contextus foi criado para apoiar **gestores, coordenadores e pesquisadores** d
 
 ---
 
-<a id="-primeiros-passos-exemplos-de-perguntas"></a>
+<a id="primeiros-passos-exemplos-de-perguntas"></a>
 
 ## 🧭 Primeiros Passos (Exemplos de Perguntas)
 
@@ -95,7 +96,7 @@ Se o assistente não puder responder, ele indicará claramente que os dados não
 
 ---
 
-<a id="-entendendo-os-indicadores"></a>
+<a id="entendendo-os-indicadores"></a>
 
 ## 📊 Entendendo os Indicadores
 
@@ -110,7 +111,47 @@ Para definições mais detalhadas, consulte os dicionários de dados disponívei
 
 ---
 
-<a id="-dúvidas-frequentes"></a>
+<a id="conjuntos-de-dados-disponíveis"></a>
+
+## 📂 Conjuntos de Dados Disponíveis
+
+O Contextus organiza os indicadores da Plataforma Nilo Peçanha em **três grandes grupos** (tabelas), todos filtrados exclusivamente para o Campus Jacobina. Entender o que cada grupo contém ajuda a formular perguntas ainda mais úteis.
+
+### 1. Indicadores Anuais de Eficiência Acadêmica
+
+- **O que traz:** visão geral do campus, ano a ano, com totais de concluintes, evadidos, retidos e as respectivas taxas.
+- **Principais informações disponíveis:**
+  - `Eficiência Acadêmica | Concluídos` e `Concluídos %`
+  - `Número de Evadidos` e `Taxa de Evasão %`
+  - `Retidos` e `Retidos %`
+  - `Índice de Eficiência Acadêmica %`
+- **Pergunta típica:** _“Qual a taxa de evasão do Campus Jacobina em 2024?”_
+
+### 2. Taxa de Evasão por Curso
+
+- **O que traz:** dados de evasão detalhados por curso, turno, tipo de oferta e modalidade de ensino.
+- **Principais informações disponíveis:**
+  - `nomeCurso` (ex.: Técnico em Informática, Computação)
+  - `tipoOferta` (Integrado, Subsequente, PROEJA etc.)
+  - `turnoCurso` e `ModalidadeEnsino`
+  - `Número de Matrículas`, `Matrículas | Número de Evadidos` e `Matrículas | Taxa de Evasão %`
+- **Perguntas típicas:** _“Qual curso teve a maior evasão em 2023?”_, _“Comparar evasão entre cursos integrados e subsequentes.”_
+
+### 3. Situação de Matrícula
+
+- **O que traz:** o detalhamento de cada matrícula (concluinte, em curso ou evadido) e o motivo da evasão.
+- **Principais informações disponíveis:**
+  - `categoriaSituacao` (Concluintes, Em curso, Evadidos)
+  - `nomeSituacao` (Abandono, Desligada, Concluída, Integralizada etc.)
+  - `FluxoRetido` (indica se o aluno ultrapassou o prazo regular)
+  - `Número de Matrículas`
+- **Perguntas típicas:** _“Quantos alunos abandonaram o curso em 2024?”_, _“Quantos estavam com matrícula ativa em 2023?”_
+
+> 💡 **Lembre‑se:** todas as tabelas cobrem aproximadamente os anos de **2017 a 2024** e referem‑se apenas ao **Campus Jacobina**. O assistente se baseia nelas para responder suas dúvidas.
+
+---
+
+<a id="dúvidas-frequentes"></a>
 
 ## ❓ Dúvidas Frequentes
 
@@ -131,7 +172,7 @@ Tente reformular a pergunta com termos mais diretos (ex.: “taxa de evasão por
 
 ---
 
-<a id="-autor-e-orientação"></a>
+<a id="autor-e-orientação"></a>
 
 ## 👨‍🎓 Autor e Orientação
 
@@ -142,7 +183,7 @@ Tente reformular a pergunta com termos mais diretos (ex.: “taxa de evasão por
 
 ---
 
-<a id="-licença"></a>
+<a id="licença"></a>
 
 ## 📄 Licença
 
@@ -150,7 +191,7 @@ Este projeto está licenciado sob a **Licença MIT** – veja o arquivo [LICENSE
 
 ---
 
-<a id="-agradecimentos"></a>
+<a id="agradecimentos"></a>
 
 ## 🙏 Agradecimentos
 
