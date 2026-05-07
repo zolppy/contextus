@@ -197,5 +197,5 @@ Este projeto está licenciado sob a **Licença MIT** – veja o arquivo [LICENSE
 
 - À **Plataforma Nilo Peçanha** por disponibilizar os dados públicos da Rede Federal.
 - Ao **IFBA Campus Jacobina** pelo suporte e formação.
-- Ao orientador **Prof. Ivo Chaves de França**.
+- Ao orientador **Prof. Me. Ivo Chaves de França**.
 - À comunidade open‑source pelas ferramentas que tornaram este projeto possível.
