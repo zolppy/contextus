@@ -3,7 +3,7 @@
 ![Status](https://img.shields.io/badge/Status-Finalizado-red?style=for-the-badge)
 ![Acesso](https://img.shields.io/badge/Acesso-Gratuito%20via%20Web-green?style=for-the-badge)
 
-**Contextus** é parte do meu Trabalho de Conclusão de Curso do curso de Licenciatura em Computação do Instituto Federal de Educação, Ciência e Tecnologia da Bahia, Campus Jacobina. Trata-se de um protótipo de assistente virtual inteligente que responde perguntas sobre os **indicadores educacionais** do **Instituto Federal da Bahia – Campus Jacobina**, a partir dos dados públicos da **Plataforma Nilo Peçanha (PNP)**.
+**Contextus** é parte do meu Trabalho de Conclusão de Curso de Licenciatura em Computação do Instituto Federal de Educação, Ciência e Tecnologia da Bahia, Campus Jacobina. Trata-se de um protótipo de assistente virtual inteligente que responde perguntas sobre os **indicadores educacionais** do **Instituto Federal da Bahia – Campus Jacobina**, a partir dos dados públicos da **Plataforma Nilo Peçanha (PNP)**.
 
 > 🔍 _“Transformando dados educacionais em conhecimento acessível.”_
 
