@@ -39,7 +39,7 @@ O Contextus foi criado para apoiar **gestores, coordenadores e pesquisadores** d
 
 💻 **Código-fonte:** caso tenha interesse em aspectos técnicos de implementação, o código-fonte do projeto está disponível em <a href="https://github.com/zolppy/contextus" target="_blank"><strong>https://github.com/zolppy/contextus</strong></a>.
 
-📄 **Documentação:** Este mesmo conteúdo (README) pode ser acessado de forma renderizada em <a href="https://zolppy.github.io/contextus" target="_blank"><strong>https://zolppy.github.io/contextus</strong></a>, hospedado via GitHub Pages.
+📄 **Documentação:** Se você estiver lendo isto através do GitHub, este mesmo conteúdo (README.md) pode ser acessado em uma página web em <a href="https://zolppy.github.io/contextus" target="_blank"><strong>https://zolppy.github.io/contextus</strong></a>, hospedado via GitHub Pages. Se já estiver na página, não precisa abrir.
 
 ---
 
