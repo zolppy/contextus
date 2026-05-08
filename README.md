@@ -70,7 +70,7 @@ O Contextus foi criado para apoiar **gestores, coordenadores e pesquisadores** d
 
 ## 🌐 Como Acessar
 
-1. Abra o navegador e vá para **[https://contextus.streamlit.app](https://contextus.streamlit.app)**.
+1. Abra o navegador e vá para <a href="https://contextus.streamlit.app" target="_blank"><strong>https://contextus.streamlit.app</strong></a>.
 2. Na tela inicial, você verá uma caixa de mensagem na parte inferior.
 3. Digite sua pergunta sobre os dados de evasão do Campus Jacobina e pressione **Enter**.
 4. A resposta aparecerá em texto e, se houver dados comparativos, um gráfico será exibido automaticamente.
@@ -159,19 +159,19 @@ O Contextus organiza os indicadores da Plataforma Nilo Peçanha em **três grand
 
 ## ❓ Dúvidas Frequentes
 
-**1. Preciso instalar alguma coisa?**  
+**1. Preciso instalar alguma coisa?**
 Não. O Contextus está disponível online e pode ser usado diretamente pelo navegador.
 
-**2. Posso perguntar sobre outros campi do IFBA?**  
+**2. Posso perguntar sobre outros campi do IFBA?**
 No momento, o assistente está limitado aos dados do **Campus Jacobina**.
 
-**3. Os dados são atualizados automaticamente?**  
+**3. Os dados são atualizados automaticamente?**
 Os dados carregados refletem as versões dos arquivos fornecidos pela PNP até 2024. Novas edições podem ser incorporadas futuramente.
 
 **4. Minhas conversas ficam salvas?**
 Sim, até 6 conversas ficam armazenadas no seu navegador (vinculadas ao dispositivo que você está usando). Você pode excluí‑las a qualquer momento.
 
-**5. O que fazer se a resposta não fizer sentido?**  
+**5. O que fazer se a resposta não fizer sentido?**
 Tente reformular a pergunta com termos mais diretos (ex.: “taxa de evasão por curso em 2023”). Se o problema persistir, entre em contato com o desenvolvedor.
 
 ---
@@ -180,10 +180,10 @@ Tente reformular a pergunta com termos mais diretos (ex.: “taxa de evasão por
 
 ## 👨‍🎓 Autor e Orientação
 
-**Desenvolvedor:** Gabriel Cavalcante de Jesus Oliveira  
-**Curso:** Licenciatura em Computação  
-**Instituição:** Instituto Federal da Bahia – Campus Jacobina  
-**Orientador(a):** Prof. Me. Ivo Chaves de França
+- **Desenvolvedor:** Gabriel Cavalcante de Jesus Oliveira
+- **Curso:** Licenciatura em Computação
+- **Instituição:** Instituto Federal da Bahia – Campus Jacobina
+- **Orientador(a):** Prof. Me. Ivo Chaves de França
 
 ---
 
