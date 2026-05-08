@@ -179,7 +179,7 @@ Tente reformular a pergunta com termos mais diretos (ex.: “taxa de evasão por
 **Desenvolvedor:** Gabriel Cavalcante de Jesus Oliveira  
 **Curso:** Licenciatura em Computação  
 **Instituição:** Instituto Federal da Bahia – Campus Jacobina  
-**Orientador(a):** Prof. Ivo Chaves de França
+**Orientador(a):** Prof. Me. Ivo Chaves de França
 
 ---
 
