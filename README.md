@@ -35,11 +35,11 @@ O Contextus foi criado para apoiar **gestores, coordenadores e pesquisadores** d
 2. Consulta os dados da PNP (já carregados no sistema).
 3. Devolve uma resposta em texto e, quando apropriado, gera **gráficos dinâmicos**.
 
-🌐 **Atalho para uso imediato:** acesse **[https://contextus.streamlit.app](https://contextus.streamlit.app)**.
+🌐 **Atalho para uso imediato:** acesse <a href="https://contextus.streamlit.app" target="_blank"><strong>https://contextus.streamlit.app</strong></a>.
 
-💻 **Código-fonte:** caso tenha interesse em aspectos técnicos de implementação, o código-fonte do projeto está disponível em **[https://github.com/zolppy/contextus](https://github.com/zolppy/contextus)**.
+💻 **Código-fonte:** caso tenha interesse em aspectos técnicos de implementação, o código-fonte do projeto está disponível em <a href="https://github.com/zolppy/contextus" target="_blank"><strong>https://github.com/zolppy/contextus</strong></a>.
 
-📄 **Documentação:** Este mesmo conteúdo (README) pode ser acessado de forma renderizada em **[https://zolppy.github.io/contextus](https://zolppy.github.io/contextus)**, hospedado via GitHub Pages.
+📄 **Documentação:** Este mesmo conteúdo (README) pode ser acessado de forma renderizada em <a href="https://zolppy.github.io/contextus" target="_blank"><strong>https://zolppy.github.io/contextus</strong></a>, hospedado via GitHub Pages.
 
 ---
 
