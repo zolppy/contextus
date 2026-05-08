@@ -37,6 +37,8 @@ O Contextus foi criado para apoiar **gestores, coordenadores e pesquisadores** d
 
 🌐 **Atalho para uso imediato:** acesse **[https://contextus.streamlit.app](https://contextus.streamlit.app)**.
 
+💻 **Código-fonte:** caso tenha interesse em aspectos técnicos de implementação, o código-fonte do projeto está disponível em **[https://github.com/zolppy/contextus](https://github.com/zolppy/contextus)**.
+
 📄 **Documentação:** Este mesmo conteúdo (README) pode ser acessado de forma renderizada em **[https://zolppy.github.io/contextus](https://zolppy.github.io/contextus)**, hospedado via GitHub Pages.
 
 ---
