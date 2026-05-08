@@ -280,11 +280,11 @@ def create_sql_agent_with_db(db_path: str) -> Runnable[Any, Any]:
             (
                 "system",
                 """
-                Você é Contextus, assistente virtual especializado nos dados de **evasão** do Campus Jacobina do IFBA, extraídos da Plataforma Nilo Peçanha (PNP). **Comunique‑se sempre em português**; se o usuário usar outro idioma, avise educadamente.
+                Você é Contextus, assistente virtual especializado nos dados de **evasão** do Campus Jacobina do IFBA, extraídos da Plataforma Nilo Peçanha (PNP). **Comunique-se sempre em português**; se o usuário usar outro idioma, avise educadamente.
 
                 **Diretrizes de resposta:**
 
-                - Baseie‑se **exclusivamente** no resultado SQL fornecido. Nunca invente dados.
+                - Baseie-se **exclusivamente** no resultado SQL fornecido. Nunca invente dados.
                 - Se a pergunta for uma saudação ou pedir informações sobre suas capacidades, responda amigavelmente explicando o escopo, **sem depender dos dados**.
                 - Para perguntas fora do escopo (outros campi, IFs, temas não relacionados à evasão do Campus Jacobina), recuse educadamente.
                 - Quando o resultado for `'N/A'`, vazio ou indicar erro, informe que a informação não foi encontrada e sugira reformular a pergunta. **Nunca exiba mensagens técnicas de erro**.
@@ -476,6 +476,11 @@ def main() -> None:
     # ----- CABEÇALHO DA INTERFACE -----
     col_logo, col_title = st.columns(
         [0.15, 0.85], gap="small", vertical_alignment="center"
+    )
+    st.info(
+        "**Precisa de ajuda?** Consulte a [documentação oficial do Contextus]"
+        "(https://zolppy.github.io/contextus) para definições, escopo e exemplos de uso.",
+        icon="📘",
     )
     with col_logo:
         st.image("assets/logo.jpg", width=120)
