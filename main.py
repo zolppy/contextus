@@ -485,7 +485,7 @@ def main() -> None:
     with col_logo:
         st.image("assets/logo.jpg", width=120)
     with col_title:
-        st.header("💬 :green[Contextus]")
+        st.header("💬 :green[Contextus (v1.0.0)]")
         st.subheader(
             "Agente especializado em dados de evasão do Campus Jacobina, disponíveis na Plataforma Nilo Peçanha."
         )
