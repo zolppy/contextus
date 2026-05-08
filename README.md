@@ -172,7 +172,7 @@ Os dados carregados refletem as versões dos arquivos fornecidos pela PNP até 2
 Sim, até 6 conversas ficam armazenadas no seu navegador (vinculadas ao dispositivo que você está usando). Você pode excluí‑las a qualquer momento.
 
 **5. O que fazer se a resposta não fizer sentido?**
-Tente reformular a pergunta com termos mais diretos (ex.: “taxa de evasão por curso em 2023”). Se o problema persistir, entre em contato com o desenvolvedor.
+Tente reformular a pergunta com termos mais diretos (ex.: “taxa de evasão por curso em 2023”). Se o problema persistir, entre em contato com o desenvolvedor através do e-mail <a href="mailto:zolppy.me@gmail.com" target="_blank"><strong>zolppy.me@gmail.com</strong></a>.
 
 ---
 
